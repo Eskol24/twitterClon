@@ -1,5 +1,7 @@
 var mongoose = require('mongoose');
+
 var Schema = mongoose.Schema;
+
 var PostSchema = new Schema({
   user: String,
   email: String,
@@ -7,4 +9,5 @@ var PostSchema = new Schema({
   message: String,
   publicationdate: { type: Date, default: Date.now }
 });
+
 module.exports = mongoose.model('Post', PostSchema);
